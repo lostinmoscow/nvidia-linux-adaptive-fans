@@ -1,0 +1,14 @@
+{
+  "devices": [
+    {"uuid": "GPU-REPLACE-WITH-YOUR-UUID", "pci_bus_id": "00000000:01:00.0", "x_gpu": 0, "fans": [0]}
+  ],
+  "curve": [[40,30],[42,33],[44,36],[46,40],[48,44],[50,48],[52,52],[54,56],[56,60],[58,65],[60,70],[62,78],[65,88],[70,100]],
+  "options": {
+    "poll_seconds": 2,
+    "idle_seconds": 120,
+    "cool_return_c": 55,
+    "hot_override_c": 70,
+    "hysteresis_c": 3,
+    "reduction_interval_seconds": 30
+  }
+}
