@@ -1,0 +1,19 @@
+[Unit]
+Description=Adaptive NVIDIA Linux GPU fan controller
+After=multi-user.target
+ConditionPathExists=/usr/bin/nvidia-smi
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/bin/python3 /usr/local/sbin/nvidia_fan_controller.py --config /etc/nvidia-fan-controller/config.json --display :0
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=20
+NoNewPrivileges=true
+ProtectHome=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target
